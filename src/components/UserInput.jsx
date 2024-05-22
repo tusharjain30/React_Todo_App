@@ -19,11 +19,11 @@ const UserInput = () => {
 
     return (
 
-        <div className='flex flex-col w-[60%] mt-[4rem]'>
+        <div className='flex flex-col w-[80%] mt-[4rem]'>
             <h1 className='text-white text-center text-2xl font-semibold pb-6'>Manage Your Todos</h1>
             <div className='flex'>
                 <input type="text" placeholder="Write Todo..."
-                    className="w-full font-semibold p-2 outline-none rounded-l-md"
+                    className="w-full font-semibold p-2 outline-none rounded-l-md font-bold"
                     onChange={(e) => setTodo(e.target.value)}
                     value={todo}
                 />

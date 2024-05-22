@@ -54,15 +54,15 @@ const TodoItems = () => {
 
             items.map((item) => {
                 return (
-                    <div className={`mt-4 flex justify-between w-[60%] ${item.completed ? "bg-[#C3E7A7]" : "bg-[#CBBBD4]"} p-2 rounded-md`} key={item.id}>
+                    <div className={`mt-4 flex justify-between w-[80%] ${item.completed ? "bg-[#C3E7A7]" : "bg-[#CBBBD4]"} p-2 rounded-md`} key={item.id}>
                         <div className='flex gap-4'>
                             <input type="checkbox" name="checkbox" defaultChecked={item.completed} onClick={() => toggleCompleted(item.id)} />
                             {
                                 item.isUpdate ? (
-                                    <input type="text" className='outline-none' value={updateText} onChange={(e) => setUpdateText(e.target.value)} />
+                                    <input type="text" className='outline-none font-bold' value={updateText} onChange={(e) => setUpdateText(e.target.value)} />
                                 ) :
                                     (
-                                        <h1 className={item.completed ? "line-through" : ""}>{item.name}</h1>
+                                        <h1 className={item.completed ? "line-through font-bold" : "font-bold"}>{item.name}</h1>
                                     )
                             }
                         </div>
